@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.4 (2023-02-22)</small>
+
+* url: git+ ([b2ba6fb](https://github.com/agbp/lerna-getting-started-example--copy-/commit/b2ba6fb))
+
+
+
+
+
 ## <small>0.0.3 (2023-02-22)</small>
 
 * permissions: write-all ([91529a4](https://github.com/agbp/lerna-getting-started-example--copy-/commit/91529a4))
