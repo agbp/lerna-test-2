@@ -92,17 +92,20 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: download atrifacts Runtime.zip
+        if: always()
         uses: actions/download-artifact@master
         with:
           name: Runtime.zip
 
       - name: Upload to release
+        if: always()
         uses: JasonEtco/upload-to-release@v0.1.1
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
           args: Runtime.zip application/zip
       - name: Upload Release Asset
+        if: always()
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
