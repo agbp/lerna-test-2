@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.6 (2023-02-22)</small>
+
+* another way of upload to release added ([96eaceb](https://github.com/agbp/lerna-getting-started-example--copy-/commit/96eaceb))
+* publish commented ([52b9b8d](https://github.com/agbp/lerna-getting-started-example--copy-/commit/52b9b8d))
+* publish commented ([59f5e6d](https://github.com/agbp/lerna-getting-started-example--copy-/commit/59f5e6d))
+* returned lerna publish ([c12ec6b](https://github.com/agbp/lerna-getting-started-example--copy-/commit/c12ec6b))
+* udownload zip added before upload to release ([59cc4b4](https://github.com/agbp/lerna-getting-started-example--copy-/commit/59cc4b4))
+* upload asset release to static url test ([e9cf2b2](https://github.com/agbp/lerna-getting-started-example--copy-/commit/e9cf2b2))
+
+
+
+
+
 ## <small>0.0.5 (2023-02-22)</small>
 
 * upload_url ([4ee5057](https://github.com/agbp/lerna-getting-started-example--copy-/commit/4ee5057))
