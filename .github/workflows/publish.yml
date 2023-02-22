@@ -73,6 +73,10 @@ jobs:
           rm package-lock.json
           rm Runtime.zip
 
+      - name: check git config globals
+        run: |
+          git config --global --list
+
       # https://github.com/lerna/lerna/issues/2162#issuecomment-657853895
 
       # https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions
