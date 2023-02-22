@@ -97,31 +97,56 @@ jobs:
       #   with:
       #     name: Runtime.zip
 
-      - name: Upload to release
-        if: always()
-        uses: JasonEtco/upload-to-release@v0.1.1
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        with:
-          args: Runtime.zip application/zip
+      # - name: Upload to release
+      #   if: always()
+      #   uses: JasonEtco/upload-to-release@v0.1.1
+      #   env:
+      #     GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      #   with:
+      #     args: Runtime.zip application/zip
 
-      - name: Name of last release
-        uses: actions-ecosystem/action-get-latest-tag@v1
-        id: get-latest-tag
+      # - name: Name of last release
+      #   uses: actions-ecosystem/action-get-latest-tag@v1
+      #   id: get-latest-tag
 
-      - name: Echo last tag
+      # - name: Echo last tag
+      #   run: |
+      #     echo ${( steps.get-latest-tag.outputs )}
+
+      # - name: Upload Release Asset
+      #   if: always()
+      #   id: upload-release-asset
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: https://github.com/agbp/lerna-getting-started-example--copy-/releases/tag/v0.0.5
+      #     # upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+      #     asset_path: ./Runtime.zip
+      #     asset_name: Runtime.zip
+      #     asset_content_type: application/zip
+
+      - name: Get upload URL
+        id: geturl
         run: |
-          echo ${( steps.get-latest-tag.outputs )}
-
+          upload_url=$(curl -sL https://api.github.com/repos/${{github.repository}}/releases/latest | jq -r '.upload_url')
+          echo ::set-output name=upload_url::$upload_url
       - name: Upload Release Asset
-        if: always()
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: https://github.com/agbp/lerna-getting-started-example--copy-/releases/tag/v0.0.5
+          # upload_url: https://github.com/agbp/CYP-1351-test-0.git/releases/tag/0.0.11
+          # upload_url: 'https://uploads.github.com/repos/agbp/CYP-1351-test-0/releases/93335839/'
           # upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-          asset_path: ./Runtime.zip
+          # upload_url: ${{ steps.geturl.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          # upload_url: https://api.github.com/repos/${{github.repository}}/releases/latest/assets?name https://api.github.com/repos/${{github.repository}}/releases/latest/assetslabel
+          # upload_url: https://uploads.github.com/repos/agbp/CYP-1351-test-0/releases/latest/assets{?name,label}
+          # upload_url: https://uploads.github.com/repos/agbp/CYP-1351-test-0/releases/93340474/assets{?name,label}
+          # upload_url: https://uploads.github.com/repos/${{github.repository}}/releases/latest/assets?{name,label}
+          upload_url: ${{ steps.geturl.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+
+          asset_path: Runtime.zip
           asset_name: Runtime.zip
           asset_content_type: application/zip
