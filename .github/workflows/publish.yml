@@ -127,7 +127,7 @@ jobs:
       #     asset_content_type: application/zip
 
       - name: Get upload URL
-        id: geturl
+        id: geturl2
         run: |
           upload_url=$(curl -sL https://api.github.com/repos/agbp/lerna-getting-started-example--copy-/releases/latest | jq -r '.upload_url')
           echo ::set-output name=upload_url::$upload_url
@@ -145,7 +145,7 @@ jobs:
           # upload_url: https://uploads.github.com/repos/agbp/CYP-1351-test-0/releases/latest/assets{?name,label}
           # upload_url: https://uploads.github.com/repos/agbp/CYP-1351-test-0/releases/93340474/assets{?name,label}
           # upload_url: https://uploads.github.com/repos/${{github.repository}}/releases/latest/assets?{name,label}
-          upload_url: ${{ steps.geturl.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          upload_url: ${{ steps.geturl2.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
 
           asset_path: Runtime.zip
           asset_name: Runtime.zip
