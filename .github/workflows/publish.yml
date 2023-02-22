@@ -64,22 +64,23 @@ jobs:
       # - name: npx lerna bootstrap
       #   run: |
       #     npx lerna bootstrap
-      - name: npm install
-        run: |
-          npm install
 
-      - name: clean - remove WebView, package-lock.json, Runtime.zip
-        run: |
-          rm -rf WebView
-          rm package-lock.json
-          rm Runtime.zip
+      # - name: npm install
+      #   run: |
+      #     npm install
 
-      - name: check git config globals
-        run: |
-          git init
-          git config --global user.name "Andrey Golovin"
-          git config --global user.email "Andrey.L.Golovin@gmail.com"
-          git config --global --list
+      # - name: clean - remove WebView, package-lock.json, Runtime.zip
+      #   run: |
+      #     rm -rf WebView
+      #     rm package-lock.json
+      #     rm Runtime.zip
+
+      # - name: check git config globals
+      #   run: |
+      #     git init
+      #     git config --global user.name "Andrey Golovin"
+      #     git config --global user.email "Andrey.L.Golovin@gmail.com"
+      #     git config --global --list
 
       # https://github.com/lerna/lerna/issues/2162#issuecomment-657853895
 
