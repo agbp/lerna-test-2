@@ -1,10 +1,13 @@
 {
-  "name": "root",
-  "private": true,
-  "devDependencies": {
-    "lerna": "^6.5.1"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+	"name": "root",
+	"private": true,
+	"devDependencies": {
+		"lerna": "^6.5.1"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"publish": "lerna publish"
+	}
 }
