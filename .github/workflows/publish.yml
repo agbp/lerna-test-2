@@ -75,6 +75,7 @@ jobs:
 
       - name: check git config globals
         run: |
+          git init
           git config --global --list
 
       # https://github.com/lerna/lerna/issues/2162#issuecomment-657853895
