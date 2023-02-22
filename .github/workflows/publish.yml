@@ -20,6 +20,52 @@ jobs:
           node-version: '14.x'
           registry-url: https://npm.pkg.github.com/
 
+      - name: creating dir structure
+        run: |
+          mkdir WebView
+          mkdir WebView/node_modules
+          mkdir WebView/node_modules/@flowpub
+          mkdir WebView/node_modules/@flowpub/content
+          mkdir WebView/node_modules/@flowpub/core
+          mkdir WebView/node_modules/@flowpub/css-pack
+          mkdir WebView/node_modules/@flowpub/drm-module
+          mkdir WebView/node_modules/@flowpub/glue-modules
+          mkdir WebView/node_modules/@flowpub/glue-rpc
+          mkdir WebView/node_modules/@flowpub/glue-shared
+          mkdir WebView/node_modules/@flowpub/navigator
+          mkdir WebView/node_modules/@flowpub/publication
+          mkdir WebView/node_modules/@flowpub/renderer
+          mkdir WebView/node_modules/@flowpub/webpub-model
+          mkdir WebView/readium-css
+      - name: copy files
+        run: |
+          cp -r packages/content/dist               WebView/node_modules/@flowpub/content/dist
+          cp -r packages/core/dist                  WebView/node_modules/@flowpub/core/dist
+          cp -r packages/css-pack/dist              WebView/node_modules/@flowpub/css-pack/dist
+          cp -r packages/drm-module/dist            WebView/node_modules/@flowpub/drm-module/dist
+          cp -r packages/glue-modules/dist          WebView/node_modules/@flowpub/glue-modules/dist
+          cp -r packages/glue-rpc/dist              WebView/node_modules/@flowpub/glue-rpc/dist
+          cp -r packages/glue-shared/dist           WebView/node_modules/@flowpub/glue-shared/dist
+          cp -r packages/navigator/dist             WebView/node_modules/@flowpub/navigator/dist
+          cp -r packages/publication/dist           WebView/node_modules/@flowpub/publication/dist
+          cp -r packages/renderer/dist              WebView/node_modules/@flowpub/renderer/dist
+          cp -r packages/webpub-model/dist          WebView/node_modules/@flowpub/webpub-model/dist
+          cp -r packages/css-pack/src/*.css         WebView/readium-css
+          cp -r .github/workflows/assets/test.html  WebView
+      - name: zip Runtime
+        uses: thedoctor0/zip-release@0.7.1
+        with:
+          type: 'zip'
+          filename: 'Runtime.zip'
+          directory: 'WebView'
+      - name: move Runtime.zip to root
+        run: mv WebView/Runtime.zip ./
+      - name: upload Runtime.zip
+        uses: actions/upload-artifact@master
+        with:
+          name: Runtime.zip
+          path: Runtime.zip
+
       # - name: npm ci
       #   run: |
       #     npm ci
