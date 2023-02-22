@@ -20,11 +20,11 @@ jobs:
           node-version: '14.x'
           registry-url: https://npm.pkg.github.com/
 
-      - name: npm ci
-        run: |
-          npm ci
-        env:
-          CI: true
+      # - name: npm ci
+      #   run: |
+      #     npm ci
+      #   env:
+      #     CI: true
 
       # https://github.com/lerna/lerna/issues/2162#issuecomment-657853895
 
