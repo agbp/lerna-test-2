@@ -27,7 +27,7 @@ export default function App() {
 				<Scripts />
 				<LiveReload />
 			</body>
-			<div>some change</div>
+			<div>some change 2</div>
 		</html>
 	);
 }
