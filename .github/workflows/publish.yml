@@ -84,11 +84,11 @@ jobs:
       # https://github.com/lerna/lerna/issues/2162#issuecomment-657853895
 
       # https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions
-      - name: npm publish
-        run: |
-          npm run publish -- --yes
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      # - name: npm publish
+      #   run: |
+      #     npm run publish -- --yes
+      #   env:
+      #     GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: Upload Release Asset
         id: upload-release-asset
