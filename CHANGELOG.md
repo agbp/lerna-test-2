@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.7 (2023-02-22)</small>
+
+* if: always() ([a0976d5](https://github.com/agbp/lerna-getting-started-example--copy-/commit/a0976d5))
+
+
+
+
+
 ## <small>0.0.6 (2023-02-22)</small>
 
 * another way of upload to release added ([96eaceb](https://github.com/agbp/lerna-getting-started-example--copy-/commit/96eaceb))
