@@ -60,9 +60,9 @@ jobs:
       #   env:
       #     CI: true
 
-      - name: npx lerna pootsrtap
+      - name: npx lerna bootsrtap
         run: |
-          npx lerna pootsrtap
+          npx lerna bootsrtap
 
       # https://github.com/lerna/lerna/issues/2162#issuecomment-657853895
 
