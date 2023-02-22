@@ -60,9 +60,12 @@ jobs:
       #   env:
       #     CI: true
 
-      - name: npx lerna bootstrap
+      # - name: npx lerna bootstrap
+      #   run: |
+      #     npx lerna bootstrap
+      - name: npm install
         run: |
-          npx lerna bootstrap
+          npm install
 
       # https://github.com/lerna/lerna/issues/2162#issuecomment-657853895
 
