@@ -1,15 +1,17 @@
 {
-	"$schema": "node_modules/lerna/schemas/lerna-schema.json",
-	"useWorkspaces": true,
-	"npmClient": "npm",
-	"command": {
-		"publish": {
-			"message": "chore(release): publish",
-			"registry": "https://npm.pkg.github.com",
-			"conventionalCommits": true,
-			"changelogPreset": "conventionalcommits"
-		}
-	},
-	"packages": ["packages/*"],
-	"version": "0.0.2"
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "useWorkspaces": true,
+  "npmClient": "npm",
+  "command": {
+    "publish": {
+      "message": "chore(release): publish",
+      "registry": "https://npm.pkg.github.com",
+      "conventionalCommits": true,
+      "changelogPreset": "conventionalcommits"
+    }
+  },
+  "packages": [
+    "packages/*"
+  ],
+  "version": "0.0.3"
 }
