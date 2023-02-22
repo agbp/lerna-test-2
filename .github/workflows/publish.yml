@@ -76,6 +76,8 @@ jobs:
       - name: check git config globals
         run: |
           git init
+          git config --global user.name "Andrey Golovin"
+          git config --global user.email "Andrey.L.Golovin@gmail.com"
           git config --global --list
 
       # https://github.com/lerna/lerna/issues/2162#issuecomment-657853895
