@@ -39,19 +39,7 @@ jobs:
           mkdir WebView/readium-css
       - name: copy files
         run: |
-          cp -r packages/content/dist               WebView/node_modules/@flowpub/content/dist
-          cp -r packages/core/dist                  WebView/node_modules/@flowpub/core/dist
-          cp -r packages/css-pack/dist              WebView/node_modules/@flowpub/css-pack/dist
-          cp -r packages/drm-module/dist            WebView/node_modules/@flowpub/drm-module/dist
-          cp -r packages/glue-modules/dist          WebView/node_modules/@flowpub/glue-modules/dist
-          cp -r packages/glue-rpc/dist              WebView/node_modules/@flowpub/glue-rpc/dist
-          cp -r packages/glue-shared/dist           WebView/node_modules/@flowpub/glue-shared/dist
-          cp -r packages/navigator/dist             WebView/node_modules/@flowpub/navigator/dist
-          cp -r packages/publication/dist           WebView/node_modules/@flowpub/publication/dist
-          cp -r packages/renderer/dist              WebView/node_modules/@flowpub/renderer/dist
-          cp -r packages/webpub-model/dist          WebView/node_modules/@flowpub/webpub-model/dist
-          cp -r packages/css-pack/src/*.css         WebView/readium-css
-          cp -r .github/workflows/assets/test.html  WebView
+          cp -r packages               WebView
       - name: zip Runtime
         uses: thedoctor0/zip-release@0.7.1
         with:
