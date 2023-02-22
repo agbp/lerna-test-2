@@ -60,9 +60,9 @@ jobs:
       #   env:
       #     CI: true
 
-      - name: npm install
+      - name: npx lerna pootsrtap
         run: |
-          npm install
+          npx lerna pootsrtap
 
       # https://github.com/lerna/lerna/issues/2162#issuecomment-657853895
 
