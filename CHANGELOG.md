@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.9 (2023-02-26)</small>
+
+* lets try to bublish with lerna ([48f8b9a](https://github.com/agbp/lerna-getting-started-example--copy-/commit/48f8b9a))
+
+
+
+
+
 ## <small>0.0.8 (2023-02-26)</small>
 
 * .github ([d949efa](https://github.com/agbp/lerna-getting-started-example--copy-/commit/d949efa))
