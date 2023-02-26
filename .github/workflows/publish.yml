@@ -90,6 +90,9 @@ jobs:
           npm run publish -- --yes
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: release
+        if: always()
+        uses: ncipollo/release-action@v1
 
       # - name: download atrifacts Runtime.zip
       #   if: always()
