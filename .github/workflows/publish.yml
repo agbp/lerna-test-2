@@ -65,9 +65,9 @@ jobs:
       #   run: |
       #     npx lerna bootstrap
 
-      # - name: npm install
-      #   run: |
-      #     npm install
+      - name: npm install
+        run: |
+          npm install
 
       # - name: clean - remove WebView, package-lock.json, Runtime.zip
       #   run: |
@@ -75,21 +75,21 @@ jobs:
       #     rm package-lock.json
       #     rm Runtime.zip
 
-      # - name: check git config globals
-      #   run: |
-      #     git init
-      #     git config --global user.name "Andrey Golovin"
-      #     git config --global user.email "Andrey.L.Golovin@gmail.com"
-      #     git config --global --list
+      - name: check git config globals
+        run: |
+          git init
+          git config --global user.name "Andrey Golovin"
+          git config --global user.email "Andrey.L.Golovin@gmail.com"
+          git config --global --list
 
       # # https://github.com/lerna/lerna/issues/2162#issuecomment-657853895
 
-      # # https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions
-      # - name: npm publish
-      #   run: |
-      #     npm run publish -- --yes
-      #   env:
-      #     GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      # https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions
+      - name: npm publish
+        run: |
+          npm run publish -- --yes
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       # - name: download atrifacts Runtime.zip
       #   if: always()
