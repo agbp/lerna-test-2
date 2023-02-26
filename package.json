@@ -11,9 +11,10 @@
 		"@commitlint/config-conventional": "8.3.4",
 		"@commitlint/prompt-cli": "8.3.5"
 	},
-	"workspaces": [
-		"packages/*"
-	],
+	"workspaces": {
+    "nohoist": [
+					"packages/*"]
+		},
 	"scripts": {
 		"publish": "lerna publish --no-verify-access --yes"
 	}
