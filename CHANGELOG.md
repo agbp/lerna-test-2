@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.11 (2023-02-26)</small>
+
+* --no verify access ([a2c9379](https://github.com/agbp/lerna-getting-started-example--copy-/commit/a2c9379))
+
+
+
+
+
 ## <small>0.0.10 (2023-02-26)</small>
 
 * LICENSE.md ([54b16ec](https://github.com/agbp/lerna-getting-started-example--copy-/commit/54b16ec))
