@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.8 (2023-02-26)</small>
+
+* chore: test change version ([a14fd67](https://github.com/agbp/lerna-test-2/commit/a14fd67))
+* chore(release): publish ([2ac4fd1](https://github.com/agbp/lerna-test-2/commit/2ac4fd1))
+* chore(release): publish ([fe2d780](https://github.com/agbp/lerna-test-2/commit/fe2d780))
+* chore(release): publish ([9d20534](https://github.com/agbp/lerna-test-2/commit/9d20534))
+* chore(release): publish ([c075d7c](https://github.com/agbp/lerna-test-2/commit/c075d7c))
+* chore(release): publish ([7fc75e0](https://github.com/agbp/lerna-test-2/commit/7fc75e0))
+* 🔨fix: build fails on windows. ([ef56520](https://github.com/agbp/lerna-test-2/commit/ef56520))
+* everything is set up ([2d3b53e](https://github.com/agbp/lerna-test-2/commit/2d3b53e))
+* some change to make lerna publish ([38ef6e4](https://github.com/agbp/lerna-test-2/commit/38ef6e4))
+* v0.0.1 ([3146578](https://github.com/agbp/lerna-test-2/commit/3146578))
+* v0.0.2 ([8a158d8](https://github.com/agbp/lerna-test-2/commit/8a158d8))
+
+
+
+
+
 ## <small>0.0.7 (2023-02-22)</small>
 
 **Note:** Version bump only for package header
