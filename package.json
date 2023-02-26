@@ -15,6 +15,6 @@
 		"packages/*"
 	],
 	"scripts": {
-		"publish": "lerna publish"
+		"publish": "lerna publish --no-verify-access --yes"
 	}
 }
